@@ -5,7 +5,7 @@ app.get('/',(req, res)=>{
     //res.send('Hello World!');
     child_process.exec('fortune',(error, message)=> {
         if(error===null){
-            res.send(message+ "Right now it is: " + Date());
+            res.send("Your fortune is" + message+ "Right now it is: " + Date());
         } else{
             res.send('Error: '+ error);
         }
